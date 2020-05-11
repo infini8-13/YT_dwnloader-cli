@@ -30,15 +30,15 @@ def yt_downloader_encoder(yt):
     yn=input("Proceed? y/n  ")
     if yn=='y' or 'Y':
         print("Downloading "+k+" of "+title+ "...")
-        pref_stream.download('C:/Users/saas1/Downloads/YouTube Downloads')
+        pref_stream.download(dir)
         if c=="":
-            yt.streams.filter(only_audio=True).first().download('D:/extra downloads/a')
-            in_video = ffmpeg.input('C:/Users/saas1/Downloads/YouTube Downloads/'+filename)
-            in_audio = ffmpeg.input('D:/extra downloads/a/'+filename)
-            ffmpeg.concat(in_video, in_audio, v=1, a=1).output("C:/Users/saas1/Downloads/YouTube Downloads/_"+filename).run()
-            os.remove('D:/extra downloads/a')
-            os.remove('C:/Users/saas1/Downloads/YouTube Downloads/'+filename)
-            os.rename('C:/Users/saas1/Downloads/YouTube Downloads/_'+filename,'C:/Users/saas1/Downloads/YouTube Downloads/'+filename)
+            yt.streams.filter(only_audio=True).first().download(dir+'/a')
+            in_video = ffmpeg.input(dir+'/'+filename)
+            in_audio = ffmpeg.input(dir+'/a/'+filename)
+            ffmpeg.concat(in_video, in_audio, v=1, a=1).output(dir+"/_"+filename).run()
+            os.remove(dir+'/a')
+            os.remove(dir'/'+filename)
+            os.rename(dir'/_'+filename,dir+'/'+filename)
         print("Downloaded Succesfully")
     else:
        print("Download Cancelled.")
@@ -52,4 +52,5 @@ ap.add_argument("-v", "--video_link", required=True,
 
 args = vars(ap.parse_args())  #parsed
 yt=YouTube(args["video_link"])
-yt_downloader_encoder(yt)
+dir='C:/Users/saas1/Downloads/YouTube Downloads'
+yt_downloader_encoder(yt,dir)
