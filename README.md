@@ -13,4 +13,4 @@ optional arguments:
   
 # Note:
 In the variable 'dir',kindly insert the required directory to which the files will be downloaded.
-The 'dir' variable is initialised with the directory to which the files are downloaded in the contributors PC
+The 'dir' variable is initialised with the directory to which the files are downloaded in the contributor's PC
