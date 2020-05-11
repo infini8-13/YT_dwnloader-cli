@@ -4,7 +4,7 @@ import cv2
 import ffmpeg
 import os
 
-def yt_downloader_encoder(yt):
+def yt_downloader_encoder(yt,dir):
     k=""
     yt_link=yt
     title=yt_link.title
