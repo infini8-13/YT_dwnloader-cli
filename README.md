@@ -10,4 +10,7 @@ $ ytd_cli.py [-h] -v VIDEO_LINK
                         
 optional arguments:
   -h, --help            show this help message and exit
-
+  
+# Note:
+In the variable 'dir',kindly insert the required directory to which the files will be downloaded.
+The 'dir' variable is initialised with the directory to which the files are downloaded in the contributors PC
