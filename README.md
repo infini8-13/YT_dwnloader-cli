@@ -1,9 +1,9 @@
 # YT_dwnloader-cli
 
-Download audio stream,video stream, or video along with audio just thru command line
+Download audio stream,video stream, or video along with audio of a YouTube video just thru command line
 # Usage:
 
-$ ytd_cli.py [-h] -v VIDEO_LINK
+$ python ytd_cli.py [-h] -v VIDEO_LINK
  # Required arguments:
    -v VIDEO_LINK, --video_link VIDEO_LINK
                         internet link to video to be proccessed
