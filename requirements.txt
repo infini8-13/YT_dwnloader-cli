@@ -1,0 +1,4 @@
+pytube3==9.6.4
+ffmpeg_python==0.2.0
+ffmpeg==1.4
+pytube==9.6.0
