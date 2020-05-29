@@ -37,8 +37,8 @@ def yt_downloader_encoder(yt,dir):
             in_audio = ffmpeg.input(dir+'/a/'+filename)
             ffmpeg.concat(in_video, in_audio, v=1, a=1).output(dir+"/_"+filename).run()
             os.remove(dir+'/a')
-            os.remove(dir'/'+filename)
-            os.rename(dir'/_'+filename,dir+'/'+filename)
+            os.remove(dir+'/'+filename)
+            os.rename(dir+'/_'+filename,dir+'/'+filename)
         print("Downloaded Succesfully")
     else:
        print("Download Cancelled.")
